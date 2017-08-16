@@ -33,6 +33,7 @@ a {
 .sections {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .left-column {
@@ -41,7 +42,9 @@ a {
 }
 
 .left-column img {
-  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 .rectangle {
@@ -58,12 +61,12 @@ a {
 
 .information {
   width: 65%;
-
 }
 
 .information p {
   padding: 8px 0px;
 }
+
 .mobile {
   display: none;
 }
@@ -91,6 +94,11 @@ header {
   height: 32px;
 }
 
+.logotype img:nth-child(1n+2) {
+  display: none;
+  margin-left: 16px;
+}
+
 header p {
   font-weight: 300;
 }
@@ -107,6 +115,23 @@ li {
     margin-left: 16px;
 }
 
+@media only screen and (max-width: 640px) {
+  header p {
+    display: none;
+  }
+
+  .logotype {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .logotype img:nth-child(1n+2) {
+    display: inline;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
 /* top section */
 .top.section {
   display: flex;
@@ -128,6 +153,31 @@ button {
   margin: 8px 0px;
 }
 
+@media only screen and (max-width: 640px) {
+  .top.section {
+    flex-direction: column;
+  }
+  .left-column {
+    width: 100%;
+    padding: 0px;
+  }
+  .top-right {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .top-right h1 {
+    padding: 32px 16px;
+  }
+  .top-right p {
+    padding: 0px 16px;
+  }
+  .top-right button {
+    width: 100%;
+    margin: 24px 16px 32px 16px;
+  }
+}
 /* second-section */
 .second.section {
   display: flex;
@@ -143,7 +193,7 @@ button {
   padding: 24px 0px;
 }
 
-h6 {
+.left-column h6 {
   font-size: 14px;
   font-weight: bold;
 }
@@ -153,6 +203,45 @@ h6 {
   padding-top: 16px;
 }
 
+@media only screen and (max-width: 640px) {
+  .second.section .left-column {
+    display: none;
+  }
+
+  .right-column {
+    width: 100%;
+    padding-top: 0px;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 16px;
+  }
+
+  .information h3, p, a {
+    margin: 16px 16px 0px 16px;
+  }
+
+  .right-column .rectangle:nth-child(1n+2) {
+    padding: 32px 0px;
+  }
+
+  .right-column .rectangle:first-child {
+    padding: 0px 0px 32px 0px;
+  }
+}
 /*third section*/
 .third.section {
   display: flex;
@@ -197,6 +286,45 @@ h6 {
   margin: 8px 0px;
 }
 
+@media only screen and (max-width: 640px) {
+  .third.section {
+    width: 100%;
+    padding: 32px 16px;
+  }
+  .third.section h2 {
+    margin: 0px 0px 16px 0px;
+  }
+  .courses {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    align-items: center;
+    margin: 0px;
+  }
+
+  .course {
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin: 4px;
+    padding: 0px;
+  }
+
+  .course:first-child {
+    margin-top: 0px;
+  }
+
+  .course:last-child {
+    margin-bottom: 0px;
+  }
+  .course img, h5, p {
+    display: none;
+  }
+  .course h3 {
+    margin: 16px 16px 24px 16px;
+  }
+}
+
 /*bottom section*/
 .bottom.section {
   display: flex;
@@ -234,6 +362,21 @@ video {
   padding: 16px 0px;
 }
 
+@media only screen and (max-width: 640px) {
+  .bottom.section h2 {
+    margin: 32px 0px 16px 0px;
+  }
+  .columns {
+    justify-content: center;
+  }
+  .bottom-left {
+    width: 100%;
+    padding: 0px 0px 24px 0px;
+  }
+  .bottom-left h3, p, .bottom-right {
+    display: none;
+  }
+}
 /*footer*/
 footer {
   display: flex;
@@ -243,4 +386,18 @@ footer {
 
 .links a {
   margin-left: 16px;
+}
+
+@media only screen and (max-width: 640px) {
+  footer {
+    justify-content: flex-start;
+    padding: 16px;
+  }
+  footer p {
+    display: flex;
+    font-size: 16px;
+  }
+  .links {
+    display: none;
+  }
 }
