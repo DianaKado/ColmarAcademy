@@ -90,6 +90,18 @@ strong {
   display: none;
 }
 
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h5 {
+    font-size: 15px;
+  }
+}
+
 /* header */
 header {
   display: flex;
@@ -126,7 +138,7 @@ li {
     margin-left: 16px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   header p {
     display: none;
   }
@@ -149,6 +161,7 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .top-right {
@@ -176,7 +189,7 @@ button:hover {
 button:active {
   background-color: hsl(3, 53%, 51%);
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   .top.section {
     flex-direction: column;
   }
@@ -242,7 +255,7 @@ button:active {
   padding-right: 16px;
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   .second.section .left-column {
     display: none;
   }
@@ -336,7 +349,7 @@ button:active {
 .course p {
   margin: 0px 16px;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   .third.section {
     width: 100%;
     padding: 32px 16px;
@@ -423,7 +436,7 @@ video {
   background-color: hsl(48, 28%, 95%);
 }
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   .bottom.section h1 {
     margin: 32px 0px 16px 0px;
   }
@@ -454,7 +467,7 @@ footer {
 footer p {
   color: white;
 }
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 470px) {
   footer {
     justify-content: flex-start;
     padding: 16px;
