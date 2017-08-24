@@ -374,7 +374,7 @@ button:active {
   }
 
   .course:nth-child(2n+2) {
-    background-color: hsl(48, 28%, 86%);
+    background-color: hsl(43, 28%, 95%);
   }
 
   .course:first-child {
